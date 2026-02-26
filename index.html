@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="https://schema.org/Restaurant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Le Fettuccine - Restaurante de comida italiana">
+  <meta name="keywords" content="Fettuccine pastas restaurante comida italiana">
+  <title itemprop="name">Le Fettuccine - Restaurante de comida italiana</title>
+
+  <!-- Preload Hero Image -->
+  <link rel="preload" as="image" href="images/hero.jpg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Le Fettuccine - Le Fettuccine Pastas Artesanales">
+  <meta property="og:description" content="Pastas Artesanales y Sabores Tradicionales de Italia">
+  <meta property="og:image" content="images/page/image20.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="[URL_DEL_SITIO]">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Le Fettuccine">
+  <meta name="twitter:description" content="Restaurante de comida italiana">
+  <meta name="twitter:image" content="images/page/image20.jpg">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container container" data-aos="fade-down">
+      <div class="logo">
+        <img src="images/page/image10.jpg" alt="Logo de Le Fettuccine">
+        <span>Le Fettuccine</span>
+        <div class="mobile-menu"><i class="fas fa-bars">B</i></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#history">Restaurante</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#menu">Carta</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Reservar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="hero-content container">
+      <h1 class="hero-title">Disfruta de un ambiente único y especial</h1>
+      <p class="hero-sub">Un pedacito de hogar en cada bocado, donde las pastas se cocen con amor</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn">Ver Carta</a>
+        <a href="#contacto" class="btn btn-secondary">Reservar Mesa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Historia-->
+   <section class="history" id="history">
+    <div class="container history-container">
+      <p>Nuestra historia</p>
+      <p>10 años de tradición y pastas</p>
+      <p>En Le Fettuccine cocinamos para llevar la cultura culinaria, en especial las
+        tradicionales pastas, a nuestros comensales. <br><br> Mediante una elaboración artesanal 
+        queremos recrear esos sabores tan típicos del Mediterráneo, con ingredientes locales a 
+        la mano. <br><br> El Alma nuestra es la de un acogedor hogar italiano en donde la "Nonna"
+        prepara la cena. <br>
+      </p>
+      <a href="#menu" class="btn">Ver Carta</a>
+    </div>
+   </section>
+
+    <!-- Beneficios -->
+  <section class="benefits" id="beneficios">
+    <div class="container">
+      <h2 data-aos="fade-up">¿Por qué elegir Le Fettuccine?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+          <h3>Sabor a hogar</h3>
+          <p>Cocinamos cada plato de forma especial para que nuestros comensales sientan en cada bocado el amor por la cocina</p>
+        </div>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-icon"><i class="fas fa-star"></i></div>
+          <h3>Ambiente acogedor</h3>
+          <p>[Descripción breve del beneficio 2]</p>
+        </div>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-icon"><i class="fas fa-heart"></i></div>
+          <h3>Tradición italiana</h3>
+          <p>[Descripción breve del beneficio 3]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menú / Productos -->
+  <section class="products" id="menu">
+    <div class="container">
+      <h2 data-aos="fade-up">Nuestro Menú</h2>
+
+      <div class = "container submenu">
+        <h3 data-aos="fade-up">Entrantes</h3>
+        <div class="products-grid" id="entrantes">
+          
+           <!-- Plato individual -->
+          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/products/image9.jpg" alt="[Nombre del plato 1]" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>Crema de Queso</h3>
+              <p class="product-desc">Crema + Queso Gouda</p>
+              <p class="product-price">410</p>
+              <!-- Contador -->
+              <div class="product-counter">
+                <button class="counter-btn minus">-</button>
+                <span class="counter-value">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <!-- Botón agregar -->
+              <button class="product-add-btn">Pedir</button>
+            </div>
+          </div>
+          <!-- /Plato individual -->
+           <!-- Plato individual -->
+          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/products/image3.jpg" alt="[Nombre del plato 1]" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>Crema Fettu</h3>
+              <p class="product-desc">Crema + Q. Gouda + Jamón + Salsa</p>
+              <p class="product-price">440</p>
+              <!-- Contador -->
+              <div class="product-counter">
+                <button class="counter-btn minus">-</button>
+                <span class="counter-value">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <!-- Botón agregar -->
+              <button class="product-add-btn">Pedir</button>
+            </div>
+          </div>
+          <!-- /Plato individual -->
+        </div>
+      </div>
+      <div class = "container submenu">
+        <h3 data-aos="fade-up">Platos Principales</h3>
+        <div class="products-grid" id="platos-fuertes">
+          <!-- Plato individual -->
+          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/products/image4.jpg" alt="[Nombre del plato 1]" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>Puttanesca</h3>
+              <p class="product-desc">Tomate natural + Aceitunas + Alcaparras</p>
+              <p class="product-price">1080 $</p>
+              <!-- Contador -->
+              <div class="product-counter">
+                <button class="counter-btn minus">-</button>
+                <span class="counter-value">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <!-- Botón agregar -->
+              <button class="product-add-btn">Pedir</button>
+            </div>
+          </div>
+          <!-- /Plato individual -->
+           <!-- Plato individual -->
+          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/products/image11.jpg" alt="[Nombre del plato 1]" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>Aglio e Oleo</h3>
+              <p class="product-desc">Ajo + Aceite + Q. parmesano</p>
+              <p class="product-price">1020 $</p>
+              <!-- Contador -->
+              <div class="product-counter">
+                <button class="counter-btn minus">-</button>
+                <span class="counter-value">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <!-- Botón agregar -->
+              <button class="product-add-btn">Pedir</button>
+            </div>
+          </div>
+          <!-- /Plato individual -->
+           <!-- Plato individual -->
+          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/products/image14.jpg" alt="[Nombre del plato 1]" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>Carbonara</h3>
+              <p class="product-desc">Bacon + Salsa de leche y huevo + Q. parmesano</p>
+              <p class="product-price">1080 $</p>
+              <!-- Contador -->
+              <div class="product-counter">
+                <button class="counter-btn minus">-</button>
+                <span class="counter-value">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <!-- Botón agregar -->
+              <button class="product-add-btn">Pedir</button>
+            </div>
+          </div>
+          <!-- /Plato individual -->
+           <!-- Plato individual -->
+          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/products/image10.jpg" alt="[Nombre del plato 1]" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>Lasagne</h3>
+              <p class="product-desc">Carne molida de res + Crema + Queso Gouda</p>
+              <p class="product-price">1600 $</p>
+              <!-- Contador -->
+              <div class="product-counter">
+                <button class="counter-btn minus">-</button>
+                <span class="counter-value">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <!-- Botón agregar -->
+              <button class="product-add-btn">Pedir</button>
+            </div>
+          </div>
+          <!-- /Plato individual -->
+        </div>
+      </div>
+      <div class = "container submenu">
+        <h3 data-aos="fade-up">Postres</h3>
+        <div class="products-grid" id="postres">
+          <!-- Plato individual -->
+          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/products/image16.jpg" alt="[Nombre del plato 1]" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>Tarta</h3>
+              <p class="product-desc">Cobertura de nata + Relleno de chocolate, fresa o dulce de leche</p>
+              <p class="product-price">450 $</p>
+              <!-- Contador -->
+              <div class="product-counter">
+                <button class="counter-btn minus">-</button>
+                <span class="counter-value">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <!-- Botón agregar -->
+              <button class="product-add-btn">Pedir</button>
+            </div>
+          </div>
+          <!-- /Plato individual -->
+           <!-- Plato individual -->
+          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/products/image8.jpg" alt="[Nombre del plato 1]" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>Copa de Mousse</h3>
+              <p class="product-desc">Mousse de varios sabores + Nata + Grajea o Almendras</p>
+              <p class="product-price">400 $</p>
+              <!-- Contador -->
+              <div class="product-counter">
+                <button class="counter-btn minus">-</button>
+                <span class="counter-value">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <!-- Botón agregar -->
+              <button class="product-add-btn">Pedir</button>
+            </div>
+          </div>
+          <!-- /Plato individual -->
+           <!-- Plato individual -->
+          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/products/image1.jpg" alt="[Nombre del plato 1]" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>Flan de Abu</h3>
+              <p class="product-desc">Flan de leche condensada + Caramelo</p>
+              <p class="product-price">310 $</p>
+              <!-- Contador -->
+              <div class="product-counter">
+                <button class="counter-btn minus">-</button>
+                <span class="counter-value">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <!-- Botón agregar -->
+              <button class="product-add-btn">Pedir</button>
+            </div>
+          </div>
+          <!-- /Plato individual -->
+        </div>
+      </div>
+      <div class = "container submenu">
+        <h3 data-aos="fade-up">Bebidas</h3>
+        <div class="products-grid" id="bebidas">
+          <!-- Plato individual -->
+          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/plato1.jpg" alt="[Nombre del plato 1]" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>[Plato 1]</h3>
+              <p class="product-desc">[Ingrediente 1 + Ingrediente 2 + Ingrediente 3]</p>
+              <p class="product-price">[Precio]</p>
+              <!-- Contador -->
+              <div class="product-counter">
+                <button class="counter-btn minus">-</button>
+                <span class="counter-value">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <!-- Botón agregar -->
+              <button class="product-add-btn">Agregar</button>
+            </div>
+          </div>
+          <!-- /Plato individual -->
+          <!-- Plato individual -->
+          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="product-image">
+              <img src="images/plato1.jpg" alt="[Nombre del plato 1]" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>[Plato 1]</h3>
+              <p class="product-desc">[Ingrediente 1 + Ingrediente 2 + Ingrediente 3]</p>
+              <p class="product-price">[Precio]</p>
+              <!-- Contador -->
+              <div class="product-counter">
+                <button class="counter-btn minus">-</button>
+                <span class="counter-value">0</span>
+                <button class="counter-btn plus">+</button>
+              </div>
+              <!-- Botón agregar -->
+              <button class="product-add-btn">Agregar</button>
+            </div>
+          </div>
+          <!-- /Plato individual -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonials" id="testimonios">
+    <div class="container">
+      <h2 data-aos="fade-up" data-aos-duration="700">Lo que dicen nuestros clientes</h2>
+      <div class="testimonials-grid">
+        <!--Testimonio individual-->
+        <div class="testimonial-card" itemscope itemtype="https://schema.org/Review" data-aos="fade-right" data-aos-duration="700" data-aos-delay="100" >
+          <div class="testimonial-content" itemprop="reviewBody">
+            <p>[Texto del testimonio del cliente] Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat perferendis quas recusandae dolor laboriosam nostrum beatae nisi, pariatur, at numquam quae commodi tempora animi praesentium quos, consectetur quibusdam rerum. Similique.</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="images/clients/image22.jpg" alt="Foto de [Cliente 1]" itemprop="image" loading="lazy">
+            </div>
+            <div class="author-info">
+              <h4 itemprop="author">[Nombre Cliente]</h4>
+              <p>[Rol o contexto]</p>
+            </div>
+          </div>
+        </div>
+        <!--Testimonio individual-->
+        <!--Testimonio individual-->
+        <div class="testimonial-card" itemscope itemtype="https://schema.org/Review" data-aos="fade-right" data-aos-duration="700" data-aos-delay="100" >
+          <div class="testimonial-content" itemprop="reviewBody">
+            <p>[Texto del testimonio del cliente] Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat perferendis quas recusandae dolor laboriosam nostrum beatae nisi, pariatur, at numquam quae commodi tempora animi praesentium quos, consectetur quibusdam rerum. Similique.</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="images/clients/image22.jpg" alt="Foto de [Cliente 1]" itemprop="image" loading="lazy">
+            </div>
+            <div class="author-info">
+              <h4 itemprop="author">[Nombre Cliente]</h4>
+              <p>[Rol o contexto]</p>
+            </div>
+          </div>
+        </div>
+        <!--Testimonio individual-->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Formulario -->
+   <!--
+  <section class="cta-section" id="contacto">
+    <div class="container">
+      <h2 data-aos="zoom-in">Haz tu pedido o reserva</h2>
+      <p data-aos="fade-up">Completa el formulario y nos pondremos en contacto contigo.</p>
+      
+      <div class="cta-form" data-aos="fade-up">
+        <form id="pedido-form" method="POST">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre ">
+          </div>
+          <div class="form-group">
+            <label for="telefono">Número de contacto</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Teléfono">
+          </div>
+          <div class="form-group">
+            <label for="solicitando">Solicitando</label>
+            <select id="solicitando" name="solicitando" required title="Solicitando">
+              <option value="Reserva">Reserva</option>
+              <option value="Pedio para llevar">Para llevar</option>
+            </select>
+          </div>
+        
+          <div class="form-group" id="comensales-group" >
+            <label for="comensales">Número de comensales</label>
+            <input type="number" id="comensales" name="comensales" min="1" placeholder="No de comensales">
+          </div>
+
+          <div class="form-group">
+            <label for="pedido">Pedido</label>
+            <textarea id="pedido" name="pedido" rows="3" required placeholder="Tu pedido"></textarea>
+          </div>
+
+          <div class="form-group datetime">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required>
+          </div>
+
+          <div class="form-group datetime">
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" name="hora" required>
+          </div>
+
+          <div class="cta-buttons">
+            <button type="submit" class="btn whatsapp-btn" id="whatsapp-primary">Enviar por WhatsApp</button>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  -->
+  <!-- CTA / Formulario -->
+  <section class="cta-section" id="contacto">
+    <div class="container">
+      <h2 data-aos="zoom-in">Haz tu pedido o reserva</h2>
+      <p data-aos="fade-up">Completa el formulario y nos pondremos en contacto contigo.</p>
+      
+      <div class="cta-form" data-aos="fade-up">
+        <form id="pedido-form" method="POST">
+          <div class="form-group">
+            <!--label for="nombre">Nombre completo</!--label-->
+            <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre ">
+          </div>
+          <div class="form-group">
+            <!--label for="telefono">Número de contacto</!--label-->
+            <input type="tel" id="telefono" name="telefono" required placeholder="Teléfono">
+          </div>
+          <div class="form-group">
+            <!--label for="solicitando">Solicitando</!--label-->
+            <select id="solicitando" name="solicitando" required title="Solicitando">
+              <option value="Reserva">Reserva</option>
+              <option value="Pedio para llevar">Para llevar</option>
+            </select>
+          </div>
+          <!-- Campo condicional (JS) style="display:block;"-->
+          <div class="form-group" id="comensales-group" >
+            <!--label for="comensales">Número de comensales</!--label-->
+            <input type="text" id="comensales" name="comensales" min="1" placeholder="No de comensales">
+          </div>
+
+          <div class="form-group">
+            <!--label for="pedido">Pedido</!--label-->
+            <textarea id="pedido" name="pedido" rows="3" required placeholder="Tu pedido"></textarea>
+          </div>
+          <div class="datetime">
+            <div class="form-group">
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="form-group">
+              <label for="hora">Hora</label>
+              <input type="time" id="hora" name="hora" required>
+            </div>
+          </div>
+          <div class="cta-buttons">
+            <button type="submit" class="btn whatsapp-btn" id="whatsapp-primary">Enviar por WhatsApp</button>
+            <!--<button type="button" class="btn btn-secondary" id="email-alternative">Contactar por email</button>-->
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Le Fettuccine</h3>
+          <p>Restaurante de comida italiana en Matanzas</p>
+          <div class="social-links">
+            <a href="[LINK_FACEBOOK]" target="_blank" rel="noopener noreferrer" id="facebook-link"><i class="fab fa-facebook-f"></i> [Nombre Facebook]</a>
+            <a href="[LINK_INSTAGRAM]" target="_blank" rel="noopener noreferrer" id="instagram-link"><i class="fab fa-instagram"></i> @[usuario_instagram]</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Contacto</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Milanés entre Matanzas y Magdalena</p>
+          <p><i class="fas fa-phone"></i> [Teléfono]</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Le Fettuccine. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  
+
+  
+
+  <!-- Librerías externas -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  
+  <!-- Tu JS personalizado -->
+  <script src="scripts/app.js"></script>
+</body>
+</html>
