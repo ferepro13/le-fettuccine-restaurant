@@ -90,7 +90,7 @@ header {
 }
 
 .header-container { display: flex; justify-content: space-between; align-items: center; 
-  padding: 1rem 3rem 1rem 0.4rem ; width: 100vw; box-sizing: border-box;}
+  padding: 0.4rem 3rem 1rem 0.4rem ; width: 100vw; box-sizing: border-box;}
 .logo { font-family: var(--fuente-logo); font-size: 1.6rem; font-weight: 700; 
   color: var(--color-blanco); display: flex; align-items: center; 
   background-color: var(--color-negro); padding: 0.5rem 1rem;
@@ -178,7 +178,8 @@ nav ul li:last-child:hover {background-color: var(--color-principal);}
    ------------------------------ */
 
 .products {
-  background: var(--color-fondo-claro);
+  background: 
+  linear-gradient(90deg, rgb(250, 223, 139), rgb(248, 248, 220), rgb(250, 223, 139));
 }
 .products h2 {
   text-align: center;
@@ -366,7 +367,7 @@ footer { background: var(--color-fondo-oscuro); color: var(--color-blanco); padd
 @media (max-width: 768px) {
     .history, .benefits, .products, .testimonials, .cta-section { padding: 3rem 0; 
     margin-top: 2rem}  
-
+    
     nav { display: none; position: absolute; top: 94px; left: 0; width: 100%; 
       background: rgba(255, 255, 255, 0.7); 
       box-shadow: 0 5px 10px rgba(0,0,0,0.1); padding: 20px 0; }
@@ -380,22 +381,24 @@ footer { background: var(--color-fondo-oscuro); color: var(--color-blanco); padd
     .btn { width: 100%; }
     .modal-content { margin: 10% auto; width: 95%; max-height: 90vh; }
     .modal-footer { flex-direction: column; }
+
     .history-container {width: 90vw; margin: 3rem auto 0; padding: 1.5rem; background-color: rgba(0, 0, 0, 0.8);}
-    .history-container p {font-size: 0.95rem;}
+    .history-container p {font-size: 1rem;}
     .history-container p:nth-child(2) {font-size: 1.8rem; line-height: 1.8rem; margin-bottom: 1rem;}
     .history-container p:nth-child(1) {font-size: 1.1rem; line-height: 1.1rem;}
 
-    .benefits .container {padding: 0; margin: 0;}
+    .benefits .container {padding: 0; margin: 0 auto;}
     .benefits-grid {margin-top: 1.2rem; gap: 1rem;}
     .benefit-card {padding: 0 0.4rem;}
-    .benefits h2 {margin: 1rem 0 0;}
+    .benefit-card p {line-height: 1.35rem;}
+    .benefits h2 {margin: 2.55rem 0 0;}
     .benefit-card h3, .benefit-card p {margin-bottom: 0.4rem;}
     h2 { font-size: 1.6rem; }
     h3 {font-size: 1.3rem; line-height: 1.3rem;}
 
     .products-grid {gap: 1rem;}
-    .products h2 {margin: 1rem 0;}
-    .products h3 {padding: 0; margin: 0.5rem 0 1rem;}
+    .products h2 {margin: 2.4rem 0 1rem;}
+    .products h3 {padding: 0; margin: 1.2rem 0 1rem;}
     .products .container {padding: 0;}
     .product-info {padding: 0.4rem;}
     .product-info h3 {margin: 0 0 0.5rem;}
@@ -410,7 +413,7 @@ footer { background: var(--color-fondo-oscuro); color: var(--color-blanco); padd
 @media (max-width: 576px) {
     .hero h1 { font-size: 1.8rem; width: 60vw;}
     .header-container {margin: 0; padding-right: 0.4rem;}
-    .logo {width: 100%;}
+    .logo {width: 100%; background-color: rgba(0, 0, 0, 0.9)}
     .mobile-menu {margin-left: 20%};
     .benefits-grid { grid-template-columns: repeat(3, 1fr); }
     .cta-form { padding: 20px; }

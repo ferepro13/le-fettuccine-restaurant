@@ -1,7 +1,7 @@
 /* =======================================
    Configuración global
    ======================================= */
-const WHATSAPP_NUMBER = '[NUMERO_DE_WHATSAPP]';  // ej: '+5355555555'
+const WHATSAPP_NUMBER = '+5354122553';  // ej: '+5355555555'
 const FORMSPREE_ID = '[ID_FORMSPREE]';          // ej: 'mdklyjwg'
 
   // Mensajes Toast
