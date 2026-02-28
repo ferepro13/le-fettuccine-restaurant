@@ -277,6 +277,8 @@ nav ul li:last-child:hover {background-color: var(--color-principal);}
     height: 180px;
   }
 }
+.modal.hidden {display: none;}
+
 
 /* ===============================
    MODAL DE CONFIRMACIÓN

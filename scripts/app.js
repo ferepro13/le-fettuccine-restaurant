@@ -2,7 +2,7 @@
    Configuración global
    ======================================= */
 const WHATSAPP_NUMBER = '+5354122553';  // ej: '+5355555555'
-const FORMSPREE_ID = '[ID_FORMSPREE]';          // ej: 'mdklyjwg'
+const FORMSPREE_ID = 'mjgedkwr';          // ej: 'mdklyjwg'
 
   // Mensajes Toast
 function mensajeError(mensaje){
@@ -39,6 +39,13 @@ function enviarAWhatsApp(numero, mensaje) {
   const numeroLimpio = numero.replace(/\D/g, '');
 
   try {
+      window.open(`https://wa.me/${numeroLimpio}?text=${mensajeCodificado}`, '_blank');
+      return true;
+  } catch (error) {
+      console.log('Error con window.open:', error);
+  }
+
+  try {
       window.location.href = `https://wa.me/${numeroLimpio}?text=${mensajeCodificado}`;
       return true;
   } catch (error) {
@@ -58,12 +65,6 @@ function enviarAWhatsApp(numero, mensaje) {
       console.log('Error con link:', error);
   }
 
-  try {
-      window.open(`https://wa.me/${numeroLimpio}?text=${mensajeCodificado}`, '_blank');
-      return true;
-  } catch (error) {
-      console.log('Error con window.open:', error);
-  }
 
   console.log('Todas las opciones fallaron');
   return false;
@@ -208,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ============================= */ 
       .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); backdrop-filter: blur(5px); overflow: auto; animation: fadeIn 0.3s ease; }
       .modal-content { background: var(--color-blanco); margin: 5% auto; padding: 0; border-radius: 15px; width: 90%; max-width: 500px; min-height: 80vh; display: flex; flex-direction: column; animation: slideIn 0.3s ease; }
-      .modal-header { background: linear-gradient(135deg, #FFD1DC, var(--color-secundario)); color: var(--color-blanco); padding: 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 15px 15px 0 0; }
+      .modal-header { background: linear-gradient(135deg, #f9bf61, var(--color-secundario)); color: var(--color-blanco); padding: 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 15px 15px 0 0; }
       .modal-body { padding: 25px; overflow-y: auto; flex-grow: 1; }
       .order-summary { background: var(--color-fondo-claro); padding: 10px; border-radius: 8px; max-height: 400px; overflow-y: auto; }
       .modal-footer { padding: 20px; text-align: right; border-top: 1px solid var(--color-gris-medio); display: flex; gap: 10px; justify-content: flex-end; }
@@ -218,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
   }
 
-  const form = document.querySelector('#pedido-form');
+  //const form = document.querySelector('#pedido-form');
   const modal = document.querySelector('#confirmModal');
   const modalClose = document.querySelector('.close-modal');
   const confirmSend = document.querySelector('#confirmButton');
@@ -237,6 +238,39 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.style.display = 'none';
   };
 
+  function sendMailFormspree() {
+    const form = document.querySelector('#pedido-form');
+    const formData = new FormData(form);
+
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+    console.log(data);
+
+    //enviar datos a formspree
+    fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: "POST",
+      headers: {
+        "ACCEPT": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response =>{
+      if (response.ok) {
+        // es posible manejar la respuesta de Formspree
+        console.log("Formulario enviado correctamente");
+        console.log(response);
+      }
+      else {
+        console.error("Error al enviar el formulario");
+      }
+    })
+    .catch(error => {
+      console.error(`Error en la solicitud:`, error)
+    });
+
+  }
   // Open modal and populate data
   document.getElementById('whatsapp-primary').addEventListener('click', function(e) {
     e.preventDefault();
@@ -308,11 +342,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Confirmar envío
   confirmSend.addEventListener('click', () => {
+    sendMailFormspree();
+
     const pedido = document.querySelector('#pedido').value;
     const nombre = document.querySelector('#nombre').value;
     const telefono = document.querySelector('#telefono').value;
     const solicitud = document.querySelector("#solicitando").value;
-    const comensales = document.querySelector("#comensales-group").value;
+    const comensales = document.querySelector("#comensales").value;
     const fecha = document.querySelector('#fecha').value;
     const fechaFormateada = new Date(fecha).toLocaleDateString('es-ES', {
       weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
@@ -320,9 +356,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const hora = document.querySelector('#hora').value;
     var mensaje = "mensaje";
     if (solicitud === "Reserva") {
-      mensaje = `Hola, soy ${nombre}, deseo realizar una Reserva de ${comensales} personas. \n\nFecha ${fechaFormateada} a la hora ${hora}. \n\nPuede contactarme al número ${telefono}. \n\nReserva:\n${pedido}`;
+      mensaje = `Hola, soy ${nombre}, deseo realizar una Reserva de ${comensales} personas. \nFecha ${fechaFormateada} a la hora ${hora}. \nPuede contactarme al número ${telefono}. \nReserva:\n${pedido}`;
     } else {
-      mensaje = `Hola, soy ${nombre}, deseo realizar un Pedido para llevar. \n\nFecha ${fechaFormateada} a la hora ${hora}. \n\nPuede contactarme al número ${telefono}. \n\nReserva:\n${pedido}`;
+      mensaje = `Hola, soy ${nombre}, deseo realizar un Pedido para llevar. \nFecha ${fechaFormateada} a la hora ${hora}. \nPuede contactarme al número ${telefono}. \nReserva:\n${pedido}`;
     };
     console.log(mensaje);
     enviarAWhatsApp(WHATSAPP_NUMBER, mensaje);
@@ -330,6 +366,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('pedido-form').reset();
     mensajeExito("¡Enviado correctamente!");
     modal.classList.add('hidden');
+    if (modal.style.display !== "none") {
+      console.log("forzando cierre del modal");
+      closeModal();
+    }
   });
 
   /* =======================================
