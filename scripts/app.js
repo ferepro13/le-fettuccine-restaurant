@@ -320,9 +320,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const hora = document.querySelector('#hora').value;
     var mensaje = "mensaje";
     if (solicitud === "Reserva") {
-      mensaje = encodeURIComponent(`Hola, soy ${nombre}, deseo realizar una Reserva de ${comensales} personas para la fecha ${fechaFormateada} a la hora ${hora}. \nPuede contactarme al número ${telefono}. \nPedido/Reserva:\n${pedido}`);
+      mensaje = `Hola, soy ${nombre}, deseo realizar una Reserva de ${comensales} personas. \n\nFecha ${fechaFormateada} a la hora ${hora}. \n\nPuede contactarme al número ${telefono}. \n\nReserva:\n${pedido}`;
     } else {
-      mensaje = encodeURIComponent(`Hola, soy ${nombre}, deseo realizar un Pedido para llevar para la fecha ${fechaFormateada} a la hora ${hora}. \nPuede contactarme al número ${telefono}. \nPedido/Reserva:\n${pedido}`);
+      mensaje = `Hola, soy ${nombre}, deseo realizar un Pedido para llevar. \n\nFecha ${fechaFormateada} a la hora ${hora}. \n\nPuede contactarme al número ${telefono}. \n\nReserva:\n${pedido}`;
     };
     console.log(mensaje);
     enviarAWhatsApp(WHATSAPP_NUMBER, mensaje);
