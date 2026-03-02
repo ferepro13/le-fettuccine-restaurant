@@ -114,7 +114,7 @@ nav ul li:last-child:hover {background-color: var(--color-principal);}
    Hero Section
    ============================= */
 .hero {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.15)), 
+    background: linear-gradient( rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25), rgba(0,0,0,0)), 
                 url('../images/page/image20.jpg') center/cover no-repeat;
     height: 100vh;
     display: flex;
