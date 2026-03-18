@@ -164,7 +164,8 @@ nav ul li:last-child:hover {background-color: var(--color-principal);}
    height: 90vh;
 
 }
-.benefits h2 {color: var(--color-negro);}
+.benefits h2 {color: var(--color-principal); background: linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.8), rgba(255,255,255,0.01)); 
+  width: 100%; justify-self: center; border-radius: .5rem;}
 .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
 .benefit-card { background: var(--color-blanco); padding: 30px; border-radius: 10px; 
   text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
@@ -280,37 +281,6 @@ nav ul li:last-child:hover {background-color: var(--color-principal);}
 .modal.hidden {display: none;}
 
 
-/* ===============================
-   MODAL DE CONFIRMACIÓN
-   (Agregar al final del CSS)
-   =============================== */
-/*.modal {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6);
-  display: flex; align-items: center; justify-content: center; z-index: 2000;
-}
-
-.modal.hidden {display: none;}
-
-.modal-content {background: #fff; border-radius: 12px; padding: 24px; width: 90%; max-width: 500px; text-align: left; 
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2); position: relative; animation: fadeIn 0.3s ease;
-}
-
-.modal-content h3 { margin-top: 0; margin-bottom: 16px; font-size: 1.5rem; color: var(--color-principal, #E75480);}
-
-.modal-content p { margin-bottom: 8px; font-size: 1rem; color: #333;}
-
-.modal-close {position: absolute; top: 10px; right: 14px; font-size: 1.5rem; cursor: pointer; color: #666;}
-
-.modal-close:hover { color: var(--color-principal, #E75480);}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}*/
-
-/* ===============================
-   TOAST AL AGREGAR PRODUCTO
-   (Agregar al final del CSS)
-   =============================== */
 .add-toast {background: var(--color-principal, #E75480); color: #fff; font-size: 0.9rem;
   font-weight: 600; padding: 8px 14px; border-radius: 20px; pointer-events: none; z-index: 3000;
   transform: translate(-50%, 0); white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
