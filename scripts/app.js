@@ -373,18 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =======================================
-    Email alternativo con Formspree
-    ======================================= */
-  /*const emailBtn = document.querySelector('#email-alternative');
-  if (emailBtn) {
-    emailBtn.addEventListener('click', () => {
-      form.action = `https://formspree.io/f/${FORMSPREE_ID}`;
-      form.submit();
-    });
-      
-    
-  }*/
-  /* =======================================
    Inicialización de librerías externas
    ======================================= */
   // AOS
