@@ -141,6 +141,38 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   }
 
+  function validarHora(horaStr) {
+    if (!horaStr) {
+      return {valido: false, mensaje: "Se requiere la hora para reservar."}
+    }
+    const [horas, minutos] = horaStr.split(":").map(Number);
+    const minsDesdeMedianoche = horas*60 + minutos;
+    const minValido = 12*60; //abre a las 12 al mediodia
+    const maxValido = 18*60; // cierra a las 6
+    console.log(minsDesdeMedianoche);
+
+    if (minsDesdeMedianoche >= minValido && minsDesdeMedianoche<= maxValido) {
+      return {valido: true, mensaje: ""};
+    } else {
+      return {valido:false , mensaje: "Aceptamos reservas entre las 12:00 y las 6:00 PM."}
+    }
+  }
+
+  function validarFecha(fechaStr) {
+    if (!fechaStr) return {valido:false, mensaje: "Se requiere la fecha para reservar."};
+
+    const partes = fechaStr.split("-");
+    const y = parseInt(partes[0], 10);
+    const m = parseInt(partes[1], 10) - 1;
+    const d = parseInt(partes[2], 10);
+    const fechaObj = new Date(y,m,d);
+
+    const esJueves = fechaObj.getDay() === 4;
+
+    if (esJueves) return {valido:false, mensaje: "El restaurante no abre los jueves, por favor escoja otro dia ."}
+    else return {valido:true, mensaje: ""}
+  }
+
   //Mostrar campo comensales si Reserva 
   const solicitandoSelect = document.querySelector('#solicitando');
   const comensalesGroup = document.querySelector('#comensales-group');
@@ -300,6 +332,19 @@ document.addEventListener('DOMContentLoaded', () => {
         mensajeError("Por favor introduce un número de teléfono válido");
         return;
     }
+
+    const fechaRes = validarFecha(fecha);
+    if (!fechaRes.valido) {
+      mensajeError(fechaRes.mensaje);
+      return
+    }
+    const horaRes = validarHora(hora);
+    if (!horaRes.valido) {
+      mensajeError(horaRes.mensaje);
+      return
+    }
+    console.log(fechaRes, horaRes);
+
 
     confirmNombre.textContent = nombre;
     confirmTelefono.textContent = telefono;
