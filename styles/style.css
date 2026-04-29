@@ -2,10 +2,10 @@
    Variables de color y tipografía
    ============================= */
 :root {
-    --color-principal: rgb(255, 85, 3);        /* Color destacado (ej: rosa oscuro pastelería) */
-    --color-secundario: #f4c52c;       /* Color secundario (ej: dorado) */
-    --color-fondo-claro: #F8F8F8;      /* Fondos */
-    --color-fondo-oscuro: #303030;     /* Texto principal y footer */
+    --color-principal: rgb(255, 85, 3);        
+    --color-secundario: #f4c52c;       
+    --color-fondo-claro: #F8F8F8;      
+    --color-fondo-oscuro: #303030;     
     --color-blanco: #FFFFFF;
     --color-negro: #151515;
     --color-gris-medio: #E0E0E0;  
